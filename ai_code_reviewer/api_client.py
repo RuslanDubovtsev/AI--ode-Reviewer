@@ -46,7 +46,7 @@ def get_code_review(code_content, config):
             f"{config["api_url"]}/chat/completions",
             headers=headers,
             data=json.dumps(data),
-            timeout=30  # Таймаут в 30 секунд
+            timeout=310 
         )
         response.raise_for_status()  # Вызовет исключение для статусов 4xx/5xx
         

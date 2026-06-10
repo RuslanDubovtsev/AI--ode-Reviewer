@@ -14,12 +14,12 @@ def read_code_file(filepath):
         print(f"Ошибка: Указанный путь не является файлом: {filepath}", file=sys.stderr)
         sys.exit(1)
 
-    _, file_extension = os.path.splitext(filepath)
-    supported_extensions = {".js", ".py", ".html", ".css"}
+    # _, file_extension = os.path.splitext(filepath)  # "_" - это распаковка значений. Левое игнорируется, правое добавляется. "_" является переменной
+    # supported_extensions = {".js", ".py", ".html", ".css"}
 
-    if file_extension.lower() not in supported_extensions:
-        print(f"Ошибка: Неподдерживаемое расширение файла {file_extension}. Поддерживаются: {", ".join(supported_extensions)}", file=sys.stderr)
-        sys.exit(1)
+    # if file_extension.lower() not in supported_extensions:
+    #     print(f"Ошибка: Неподдерживаемое расширение файла {file_extension}. Поддерживаются: {", ".join(supported_extensions)}", file=sys.stderr)
+    #     sys.exit(1)
 
     try:
         with open(filepath, "r", encoding="utf-8") as f:
